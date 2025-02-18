@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;0,800;1,300;1,400;1,500;1,700;1,800&display=swap');
+
+/* Tailwind Properties */
+@import "tailwindcss";
+@theme {
+  /* Fonts */
+  --font-poppins: Poppins;
+  /* Colors */
+  --color-purple: #854dff;
+  --color-light-red: #ff5757;
+  --color-white: #ffffff;
+  --color-off-white: #f0f0f0;
+  --color-light-grey: #dbdbdb;
+  --color-smokey-grey: #716f6f;
+  /* --color-smokey-grey: #8b8b8b; */
+  --color-off-black: #141414;
+}
+
+/* Remove arrows from input field */
+@layer base {
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    @apply appearance-none;
+  }
+
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}

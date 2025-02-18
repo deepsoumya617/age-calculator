@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator</title>
+    <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="./output.css" />
+</head>
+
+<body class="bg-off-white min-h-screen flex items-center justify-center">
+    <!-- Main Container -->
+    <div
+        class="mx-2 sm:mx-0 w-screen sm:w-[650px] h-[530px] sm:h-[475px] bg-white rounded-tl-[20px] rounded-tr-[20px] rounded-bl-[20px] rounded-br-[150px]">
+        <!-- Date Month Year input -->
+        <div class="ml-4 sm:ml-12 mt-8 sm:mt-9 flex gap-2 sm:gap-7">
+            <!-- Day/Date -->
+            <div>
+                <p id="label-day" class="font-bold font-poppins text-xs text-smokey-grey tracking-[3px] mb-2 opacity-95">
+                    DAY
+                </p>
+                <input id="birth-date" type="number" placeholder="DD"
+                    class="h-[60px] w-[110px] sm:w-[135px] border border-light-grey rounded-md focus:outline-none font-poppins font-bold text-3xl pl-5 tracking-wide opacity-90 hover:border-purple caret-purple mb-2" />
+                <p id="day-error" class="text-xs sm:text-[11px] font-poppins italic tracking-wider text-light-red mb-2"></p>
+            </div>
+
+            <!-- Month -->
+            <div>
+                <p id="label-month" class="font-bold font-poppins text-xs text-smokey-grey tracking-[3px] mb-2 opacity-95">
+                    MONTH
+                </p>
+                <input id="birth-month" type="number" placeholder="MM"
+                    class="h-[60px] w-[110px] sm:w-[135px] border border-light-grey rounded-md focus:outline-none font-poppins font-bold text-3xl pl-5 tracking-wide opacity-90 hover:border-purple caret-purple mb-2" />
+                <p id="month-error" class="text-xs sm:text-[11px] font-poppins italic tracking-wider text-light-red mb-2"></p>
+            </div>
+
+            <!-- Year -->
+            <div>
+                <p id="label-year" class="font-bold font-poppins text-xs text-smokey-grey tracking-[3px] mb-2 opacity-95">
+                    YEAR
+                </p>
+                <input id="birth-year" type="number" placeholder="YYYY"
+                    class="h-[60px] w-[110px] sm:w-[135px]  border border-light-grey rounded-md focus:outline-none font-poppins font-bold text-3xl pl-3 sm:pl-5 tracking-wide opacity-90 hover:border-purple caret-purple mb-2 mr-3 sm:mr-0" />
+                <p id="year-error" class="text-xs sm:text-[11px] font-poppins italic tracking-wider text-light-red mb-2 pr-1.5 sm:pr-0"></p>
+            </div>
+        </div>
+        <!-- Date Month Year input  ends-->
+
+        <!-- Line and the Arrow -->
+         <div class="ml-4 sm:ml-12 relative">
+            <!-- Line -->
+             <div class="h-[1px] w-[95%] sm:w-[520px] bg-light-grey mt-16 sm:mt-6"></div>
+             <!-- arrow -->
+              <button id="arrow-btn" class="bg-purple h-16 sm:h-20 w-16 sm:w-20 rounded-[50%] flex items-center justify-center absolute right-40 sm:right-10 -top-8 sm:-top-10
+              cursor-pointer hover:bg-off-black">
+                  <img src="./assets/icon-arrow.svg" class="w-8 sm:w-10 h-8 sm:h-10">
+              </button>
+         </div>
+         
+         <!-- Final Ouput in years months days -->
+          <div class="mt-16 sm:mt-9 ml-[22px] sm:ml-12 space-y-3 sm:space-y-2">
+                <div class="flex">
+                    <p id="output-year" class="font-extrabold font-poppins text-6xl sm:text-7xl text-purple tracking-[7px] sm:tracking-[13px] italic">--</p>
+                    <p class="font-extrabold font-poppins text-6xl sm:text-7xl text-off-black italic tracking-normal">
+                        years
+                    </p>
+                </div>
+                <div class="flex">
+                    <p id="output-month" class="font-extrabold font-poppins text-6xl sm:text-7xl text-purple tracking-[7px] sm:tracking-[13px] italic">--</p>
+                    <p class="font-extrabold font-poppins text-6xl sm:text-7xl text-off-black italic tracking-normal">
+                        months
+                    </p>
+                </div>
+                <div class="flex">
+                    <p id="output-day" class="font-extrabold font-poppins text-6xl sm:text-7xl text-purple tracking-[7px] sm:tracking-[13px] italic">--</p>
+                    <p class="font-extrabold font-poppins text-6xl sm:text-7xl text-off-black italic tracking-normal">
+                        days
+                    </p>
+                </div>
+          </div>
+    </div>
+
+    <!-- Link script.js -->
+     <script src="./script.js"></script>
+</body>
+
+</html>
